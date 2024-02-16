@@ -1,0 +1,208 @@
+/* flatuicolors  fontawesom*/
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+   margin: 0px;
+    padding: 0px;
+}
+
+.toolbox-cont{
+    height: 5rem;
+    background-color: #4b4b4b;  
+    display: flex;  /*default direction is row */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* .toolbox-cont>*{
+    margin: .5rem 0rem 0px 2rem;
+} */
+
+.toolbox-priority-cont{
+    height: 80%;
+    width: 20%;
+    background-color: #3d3d3d;
+    display: flex;
+    justify-content: space-around; /* flex even space */
+    align-items: center;
+    border-radius: 3%;
+
+}
+.color{
+    height: 50%;
+    width: 3rem;
+    background-color: red;
+    border-radius: 2px;
+}
+
+ .lightpink{
+    background-color: lightpink;
+ }
+ .lightblue{
+    background-color: lightblue;
+ }
+ .lightgreen{
+    background-color: lightgreen;
+ }
+ .black{
+    background-color: black;
+ }
+
+.action-btn-cont{
+    height: 3.5rem;
+    width: 8rem;
+    background-color: #3d3d3d;
+    display: flex;
+    border-radius: 3px;
+
+}
+
+/* .add-btn{
+    width: 2rem;
+    background-color: grey;
+}
+.rmv-btn{
+    width: 2rem;
+    background-color: grey;
+} */
+.action-btn-cont>*{  /*act-btn ke andar saare */
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #a5b1c2;
+    font-weight: bold;
+}
+
+.action-btn-cont>*:hover{  
+    background-color: #485460;
+}
+
+
+
+.modal-cont{
+    height: 50vh;
+    width: 45vw;
+    background-color: cyan;
+    position: absolute;
+    display: none;
+    top: calc( (100vh - 50vh)/2); /*space b/w '-' and 10 rem and 100vh mandatory */
+    left: calc( ( 100vw - 45vw ) /2 )
+}
+
+.textarea-container{
+    height: 100%;
+    width: 75%;
+    resize: none; /* can't drag and change dimension of textarea */
+    border: none;
+    outline: none; /*click karne pe extra border highlight nhi hogi */
+    background-color: #d2dae2;
+    padding: 2rem; /*for inside space b/w content and border */
+    font-size: 1.5rem;
+}
+
+.priority-colors-cont{
+    width: 25%;
+    height: 100%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* main axis currently vertical*/
+    align-items: center;
+}
+
+.priority-color{
+    height: 3rem;
+    width: 55%;
+    /* background-color: red;  it will override */
+}
+.border{ /* for active color */
+    border: 5px solid #7b5151;
+    /* box-shadow: 10rem; */
+}
+
+.main-cont{
+    display: flex;
+    flex-wrap: wrap; /*bahut saare ho to same 
+    line me naa aaye. line change ho jaaye */
+    margin: 2rem;
+    gap: 2rem; /*ya to ticket-cont me margin lagao
+    ya yaha gap se lagao */
+    padding: 2rem;
+    justify-content: center; /*horizonatally */
+}
+.ticket-cont{
+    height: 13rem;
+    width: 16rem;
+    background-color: #f1f2f6;
+    /* margin:2rem; */
+    
+}
+
+/* .ticket-cont>*{
+    padding: .4rem;
+} */
+
+.tkt-color{
+    height: 2rem;
+    /* background-color: black; */
+}
+.tkt-id{
+    height: 2rem;
+    padding: .4rem;
+    background-color: red;
+    /* background-color: rgb(218, 168, 168);  */
+}
+.task-area{
+    /* height: 8rem; */
+    height: calc(100% - 2rem - 2rem - 2rem);
+    padding: .4rem;
+    /* background-color: green;  */
+    outline: none;/* click karne pe border na aaye. */
+}
+.tkt-lock{
+    height: 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-end; /*lock end me aayega*/   
+    padding-right: 1rem;
+    color: #a5b1c2;
+}
+
+
+
+/*responsive.. upar bhi thoda edit kia hai..*/ 
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    .color{
+        width:2.5rem;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 900px) {
+    .modal-cont{
+        width: 55vw;
+        left: calc( ( 100vw - 55vw ) /2 )
+    }
+    .color{
+        width:2rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .modal-cont{
+        width: 70vw;
+        left: calc( ( 100vw - 70vw ) /2 );
+        /* flex-direction: column; */
+    }
+    .priority-colors-cont{
+        flex-direction: column;
+    }
+    .color{
+        width:1rem;
+    }
+}
